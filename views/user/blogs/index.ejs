@@ -1,0 +1,24 @@
+<a href="/blogs/create">Create Blog</a>
+
+<table border="1">
+<tr>
+  <th>Title</th>
+  <th>Action</th>
+</tr>
+
+<% if(blogs && blogs.length > 0){ %>
+  <% blogs.forEach(b => { %>
+    <tr>
+      <td><%= b.title %></td>
+      <td>
+        <a href="/blogs/edit/<%= b._id %>">Edit</a>
+        <a href="/blogs/<%= b._id %>">View</a>
+        <a href="/blogs/delete/<%= b._id %>">Delete</a>
+      </td>
+    </tr>
+  <% }) %>
+<% } else { %>
+<tr><td>No blogs available</td></tr>
+<% } %>
+
+</table>

@@ -1,0 +1,17 @@
+<% layout("../../layouts/admin") %>
+
+<form method="POST">
+
+<input name="name" value="<%= user.name %>"
+class="form-control mb-2">
+
+<input name="email" value="<%= user.email %>"
+class="form-control mb-2">
+
+<select name="role" class="form-control mb-2">
+<option value="user">User</option>
+<option value="admin">Admin</option>
+</select>
+
+<button class="btn btn-warning">Update</button>
+</form>

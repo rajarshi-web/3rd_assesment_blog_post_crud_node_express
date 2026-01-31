@@ -1,0 +1,68 @@
+{
+  "info": {
+    "_postman_id": "ef3dfe97-6246-44f6-a2b4-31dad3593c99",
+    "name": "3rd Assignment",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "12396403"
+  },
+  "item": [
+    {
+      "name": "http://localhost:5045/api/register",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\":\"Pradosh Mukherjee\",\r\n    \"email\":\"pcm79@yopmail.com\",\r\n    \"password\":\"123456\",\r\n    \"phone\":1236547890\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5045/api/register",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5045",
+          "path": [
+            "api",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:5045/api/login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\":\"pcm79@yopmail.com\",\r\n    \"password\":\"123456\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5045/api/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5045",
+          "path": [
+            "api",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

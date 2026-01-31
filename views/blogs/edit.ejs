@@ -1,0 +1,10 @@
+<% layout('../layouts/user') %>
+
+<h3>Edit Blog</h3>
+
+<form method="POST">
+<input name="title" value="<%= blog.title %>" class="form-control mb-2">
+<textarea name="content" class="form-control mb-3"><%= blog.content %></textarea>
+
+<button class="btn btn-primary">Update</button>
+</form>

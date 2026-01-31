@@ -1,0 +1,25 @@
+<h3>Blog Management</h3>
+
+<table class="table table-bordered bg-white">
+
+<tr>
+<th>Title</th>
+<th>Author</th>
+<th>Action</th>
+</tr>
+
+<% if(blogs && blogs.length > 0){ %>
+<% blogs.forEach(b => { %>
+<tr>
+<td><%= b.title %></td>
+<td><%= b.author.email %></td>
+<td>
+<a href="/admin/blogs/delete/<%= b._id %>" class="btn btn-danger btn-sm">Delete</a>
+</td>
+</tr>
+<% }) %>
+<% } else { %>
+<tr><td colspan="3">No blogs found</td></tr>
+<% } %>
+
+</table>

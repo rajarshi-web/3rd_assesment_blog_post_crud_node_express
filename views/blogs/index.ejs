@@ -1,0 +1,26 @@
+<h3>My Blogs</h3>
+
+<a href="/blogs/create" class="btn btn-success mb-2">Add Blog</a>
+
+<table class="table table-bordered bg-white">
+
+<tr><th>Title</th><th>Action</th></tr>
+
+<% if(blogs && blogs.length){ %>
+<% blogs.forEach(b => { %>
+<tr>
+<td><%= b.title %></td>
+<td>
+<a href="/blogs/edit/<%= b._id %>"
+class="btn btn-warning btn-sm">Edit</a>
+
+<a href="/blogs/delete/<%= b._id %>"
+class="btn btn-danger btn-sm">Delete</a>
+</td>
+</tr>
+<% }) %>
+<% } else { %>
+<tr><td>No blogs found</td></tr>
+<% } %>
+
+</table>
